@@ -1,22 +1,27 @@
-/*
-console.log("Digite o nome do seu jogador: ");
+//JSON - JavaScript object Notation
+//chave e valor com o objetivo de transferir dados
+let invoice = {
+    name: "Felipe", 
+    age: 28,
+    products: {
+        0: ["mouse 2xwm", "29.90"],
+        1: ["teclado mecanico", 129.99],
+        2: ["Monitor", 899.99],
+        3: ["TV 100 polegadas", "10000.90"]
+    }
+}
 
-let nickname = "Jose";
+generateInvoice(invoice);
 
-console.log("Bem vindo " + nickname);
-console.log(nickname + " entrou no servidor agora!!!!!!");
-*/
-/*
-const notificacao = "Pokemon Go diz:"
+function generateInvoice(invoice){
+    console.log(`O comprador é ${invoice.name}`);
+    console.log(`O idade é ${invoice.age}`);
+    console.log("-----------");
+    
+    for(let index in invoice.products){
+        let [productsName, productsPrice] = invoice.products[index];
+        console.log(`- ${productsName}: R$ ${productsPrice}`);
+    }
 
-
-console.log(notificacao  + " tem um novo pokemon na região");
-console.log (notificacao + " voce foi derrotado por im líder ");
-*/
-/*
-let notificacao = "Pokemon Go diz:";
-notificacao = "Digimon Go diz: ";
-
-console.log(notificacao  + " tem um novo pokemon na região");
-console.log (notificacao + " voce foi derrotado por im líder ");
-*/
+}
+   

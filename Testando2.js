@@ -1,18 +1,22 @@
-let poteCafe = "café melitta";
-let poteacucar = "Açucar cristal";
-let poteBiscoito = "Biscoito Maizena";
-const messagemDaVovo = "Na cozinha da vovó hoje tem: ";
+class formaDeBolo{
+    constructor(saborDaMassa, saborRecheio){
+        this.saborDaMassa = saborDaMassa;
+        this.saborRecheio = saborRecheio;
+    }
 
-console.log( messagemDaVovo +
-    poteCafe + " - " +
-    poteacucar + " - " +
-    poteBiscoito
-);
+    escrever(){
+        console.log(`Um delicioso bolo de ${this.saborDaMassa} com recheio de ${this.saborRecheio}`);
+    }
 
-poteCafe = "Café 3 melittta";
+    assar(){
+        console.log("Bolo assando de " + this.saborDaMassa);
+    }
+}
 
-console.log(messagemDaVovo +
-    poteCafe + " - " +
-    poteacucar + " - " +
-    poteBiscoito
-);
+let boloFesta = new formaDeBolo("chocolate", "nutella");
+let boloFesta2 = new formaDeBolo("morango", "pistache");
+
+boloFesta.escrever();
+boloFesta2.escrever();
+boloFesta.assar();
+boloFesta2.assar();
